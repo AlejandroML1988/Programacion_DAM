@@ -1,0 +1,29 @@
+/*Escribe un programa que pida por teclado una cadena y una letra, de manera que elimine las 3
+ * primeras ocurrencias de la letra que encuentre en la cadena y lo muestre por pantalla.
+ *  
+ */
+
+package Tema_04;
+
+import java.util.Scanner;
+
+public class Problema_Parte2_02 {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		Scanner teclado = new Scanner(System.in);
+		String frase;
+		String caracter;
+		char letra;
+		String imprimir;
+		
+		System.out.println("Escribe una frase");
+		frase = teclado.nextLine();
+		System.out.println("Escribe una letra para buscarla en la frase");
+		letra = (teclado.nextLine()).charAt(0);
+		
+		
+
+	}//main
+
+}//class

@@ -1,0 +1,14 @@
+/*Programa que cuenta el numero de palabras en una frase
+*/
+
+public class Pruebas {
+	
+	import java.util.Scanner;
+	
+public static void main(String[] args) {
+	
+	
+	
+	}//main
+
+}//Pruebas

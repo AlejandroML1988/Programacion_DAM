@@ -1,0 +1,49 @@
+/*Programa que lee una frase y una palabra y nos dice la posición de dicha palabra en la frase
+ * Si no la encuentra, devuelve un cero.
+ * 
+ * SOLUCION:
+ * Convierto la frase y la palabra a minusculas para evitar problemas de escritura del usuario.
+ * 	Por ejemplo: Frase: Busco una palabra en esta frase
+ * 				 Palabra: eN
+ * 				 La palabra "eN" está en la frase, solo que en minusculas.
+ * 
+ * Para encontrar la posicion uso el metodo indexOf(palabra) sobre la frase. Le sumo 1 porque contamos pos=1,2...
+ * 
+ * Si no encuentra la palabra pos = -1; la cambio por pos = 0 e imprimo pos (0).
+ * Si encuentra la palabra imprimo la posicion.
+ */
+package Tema_04;
+
+import java.util.Scanner;
+
+public class Pruebas {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		String frase;
+		String palabra;
+		int pos;
+		
+		System.out.println("Escribe una frase");
+		frase = teclado.nextLine();
+		System.out.println("Escribe la palabra que quieres encontrar");
+		palabra = teclado.nextLine();
+		
+		System.out.println("Frase: " + frase);
+		System.out.println("Palabra: " + palabra);
+		
+		frase = frase.toLowerCase();
+		palabra = palabra.toLowerCase();
+		
+		pos = frase.indexOf(palabra);
+		
+		if(pos == -1) {
+			System.out.println(pos);
+		}//if
+		else	
+			pos++;
+			System.out.println("La palabra esta en la posicion " + pos);
+
+	}//main
+
+}//class

@@ -1,0 +1,20 @@
+/*Impresion de numeros, el programa pide por teclado el tipo de numero que quiere el usuario
+*
+*/
+package Tema_04;
+
+import java.util.Scanner;
+
+public class Pruebas {
+	
+	public static void main(String[] args) {
+		Scanner teclado= new Scanner(System.in);
+		int x;
+		double y;
+		
+		System.out.println();
+		
+
+	}//main
+
+}//class

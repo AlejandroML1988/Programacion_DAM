@@ -1,0 +1,23 @@
+/*Programa que lee una frase de máximo 80 caracteres y la escribe progresivamente por pantalla. Por ejemplo:
+ * "ciervo" deberá imprimir:
+ * c
+ * ci
+ * cie
+ * cier
+ * cierv
+ * ciervo
+ * 
+ */
+
+package actividades_programacion;
+
+import java.util.Scanner();
+
+public class Problema_T04_01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}//main
+
+}//class

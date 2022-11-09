@@ -1,0 +1,14 @@
+//Impresion de numeros 
+
+package Tema_04;
+
+
+public class Pruebas {
+
+	public static void main(String[] args) {
+		int x;
+		double y;
+
+	}//main
+
+}//class

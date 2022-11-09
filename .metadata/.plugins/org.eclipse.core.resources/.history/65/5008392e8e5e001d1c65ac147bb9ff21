@@ -1,0 +1,14 @@
+/*Escribir un programa que pida por teclado una cadena y una letra, de manera que ponga en
+ * mayúsculas cada ocurrencia de la letra que haya en la cadena y lo muestre por pantalla.
+ */
+
+package Tema_04;
+
+public class Problema_Parte2_01 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

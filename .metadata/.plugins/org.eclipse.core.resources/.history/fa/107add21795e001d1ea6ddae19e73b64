@@ -1,0 +1,17 @@
+//Impresion de numeros 
+package Tema_04;
+
+import java.util.Scanner;
+
+public class Pruebas {
+	
+	public static void main(String[] args) {
+		Scanner teclado= new Scanner(System.in);
+		int x;
+		double y;
+		
+		
+
+	}//main
+
+}//class

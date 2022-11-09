@@ -1,0 +1,23 @@
+/*Programa que, dada una frase de no más de 80 caracteres, busque cuántas mayúsculas y cuantas minúsculas tiene y lo imrpima.
+ * 
+ * 
+ */
+package Tema_04;
+
+import java.util.Scanner;
+
+public class Problema_02 {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		int contMay;
+		int contMin;
+		String cadena;
+		String mayusculas;
+		
+		System.out.println("Escribe));
+		
+
+	}//main
+
+}//class

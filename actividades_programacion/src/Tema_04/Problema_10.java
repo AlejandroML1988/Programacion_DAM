@@ -1,0 +1,171 @@
+/*Escribir un programa que lea códigos de personas de 8 caracteres de modo que los cuatro
+ * primeros sean numéricos y contenidos entre 1990-1995 (un año), el quinto carácter sea solo (H
+ * ó M) sexo, el sexto un número que representa el curso 1 ó 2 y los caracteres séptimo y octavo
+ * pueden tener cualquier valor. Deben rechazarse los códigos que no cumplan estas condiciones.
+ * La finalización de entrada de códigos se produce cuando se introduce el código “00000000”.
+ * Al final, el programa debe sacar un informe indicando cuántos hombres y mujeres hay
+ * matriculados en primero y segundo y cuántos códigos correctos han sido leídos.
+ * 
+ * Muestra los hombres matriculados en primero, los hombres matriculados en segundo, las mujere smatriculadas en primero y las mnatriculadas en 2.
+ */
+package Tema_04;
+
+import java.util.Scanner;
+
+public class Problema_10 {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		String cadena;
+		boolean salir = false;
+		boolean añoOk = true;
+		boolean sexoOk = true;
+		boolean cursoOk = true;
+		int punt = 0;
+		int hombres1 = 0;
+		int hombres2 = 0;
+		int mujeres1 = 0;
+		int mujeres2 = 0;
+		int primero = 0;
+		int segundo = 0;
+		int correcto = 0;
+		
+		while (salir == false) {
+			punt = 0;
+			añoOk = true;
+			sexoOk = true;
+			cursoOk = true;
+			System.out.println("Introduce el codigo");
+			cadena = teclado.nextLine();
+			System.out.println("El codigo introducido es: ");
+			System.out.println(cadena);
+			
+			//Convierto cadena a mayusculas (por si introducen 'h' o 'm')
+			cadena = cadena.toUpperCase();
+			
+			if (cadena.equals("00000000"))
+				salir = true;
+			
+			else {
+				if (cadena.length() != 8)
+					System.out.println("Codigo incorrecto");
+				
+				else {
+					
+					if (añoOk) {
+
+						//Compruebo que el año sea correcto
+						while (añoOk == true && punt < 4){
+					
+							switch (punt) {
+					
+							case 0:
+								if (cadena.charAt(punt) == 49) // 49 es 1 en ASCII
+									punt ++;
+								else
+									añoOk = false;
+								break;
+					
+							case 1:
+								if (cadena.charAt(punt) == 57) //57 es 9 en ASCII
+									punt ++;
+								else
+									añoOk = false;
+								break;
+						
+							case 2:
+								if (cadena.charAt(punt) == 57) //57 es 9 en ASCII
+									punt ++;
+								else
+									añoOk = false;
+								break;
+					
+							case 3:
+								if (48 <= cadena.charAt(punt) && cadena.charAt(punt) <= 53) //48 es 0 en ASCII y 53 es 5
+									punt ++;
+								else
+									añoOk = false;				
+								break;
+					
+							default:
+							}//switch
+					
+						}//while año correcto
+						if (añoOk == true)
+							System.out.println("El año es correcto");
+						else
+							System.out.println("El año NO es correcto");
+				
+						//comprobacion de sexo correcto
+						if (añoOk == true) {
+							if (cadena.charAt(4) == 72) { //ASCI de 'H'
+								sexoOk = true;
+								System.out.println("El sexo es Hombre");
+							}
+					
+							else if (cadena.charAt(4) == 77) { //ASCI de 'M'
+								sexoOk = true;
+								System.out.println("El sexo es Mujer");
+							}
+							else {
+								sexoOk = false;
+								System.out.println("Sexo incorrecto");
+							}
+						}//comprobacion de sexoOk
+						
+						//Compruebo que el caracter de la posicion 5 sea igual a 1 o igual a 2
+						if (añoOk == true && sexoOk == true) {
+							if (cadena.charAt(5) == 49){ //49 es 1 en ASCII
+								primero++;
+								cursoOk = true;
+								System.out.println("Curso = primero");
+							}//if primero
+							else if (cadena.charAt(5) == 50) { //50 es 2 en ASCII
+								segundo ++;
+								cursoOk = true;
+								System.out.println("Curso = segundo");
+							}//else if segundo
+							
+							else {
+								cursoOk = false;
+								System.out.println("Curso no valido");
+							}
+						
+						}//Si sexo ok, compruebo curso
+			
+						if (añoOk && sexoOk && cursoOk) { //Si el codigo es correcto, lo sumo al contador de correctos
+							correcto++;
+							if (cadena.charAt(4) == 72) {
+								if (cadena.charAt(5) == 49)
+									hombres1++;
+								else
+									hombres2++;
+							}
+							else
+									if(cadena.charAt(5) == 49)
+										mujeres1++;
+									else
+										mujeres2++;
+
+
+						}	
+					}//else comprobar cadena correcta
+
+				}//else longitud cadena correcta
+			
+			}//fin leer si el código no es el de salida (00000000)
+			
+			
+		}//while para finalizar
+		
+		System.out.println("Lectura finalizada");
+		System.out.println("Hombres matriculados en 1 = " + hombres1);
+		System.out.println("Hombres matriculados en 2 = " + hombres2);
+		System.out.println("Mujeres matriculadas en 1 = " + mujeres1);
+		System.out.println("Mujeres matriculadas en 2 = " + mujeres2);
+		System.out.println("Personas matriculadas en primero = " + primero);
+		System.out.println("Personas matriculadas en segundo = " + segundo);
+		System.out.println("Codigos correctos = " + correcto);
+	}//main
+
+}//class

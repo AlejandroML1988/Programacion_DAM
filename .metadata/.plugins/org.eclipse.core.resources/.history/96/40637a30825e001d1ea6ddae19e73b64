@@ -1,0 +1,10 @@
+/*Programa que cuenta el numero de palabras en una frase
+*/
+
+public class Pruebas {
+	
+public static void main(String[] args) {
+	
+	
+	}//main
+}//Pruebas

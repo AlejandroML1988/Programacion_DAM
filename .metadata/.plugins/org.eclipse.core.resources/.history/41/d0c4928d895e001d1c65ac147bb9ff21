@@ -1,0 +1,27 @@
+/*Programa que cuenta el numero de palabras en una frase
+*/
+package Tema_04;
+
+import java.util.Scanner;
+
+public class Pruebas {
+	public static void main(String[] args) {
+			Scanner teclado = new Scanner(System.in);
+			int palabras;
+			String frase;
+			int cont;
+			boolean palabra;
+			int puntero; //Recorre el string
+			
+			System.out.println("Escribe una frase");
+			frase = teclado.nextLine();
+			
+			while (cont < frase.length()) {
+				
+				
+			}//while palabra
+		
+	
+	}//main
+
+}//Pruebas

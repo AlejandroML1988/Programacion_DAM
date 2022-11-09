@@ -1,0 +1,18 @@
+/*Escribir un programa que pida por teclado una cadena y una letra, de manera que ponga en
+ * mayúsculas cada ocurrencia de la letra que haya en la cadena y lo muestre por pantalla.
+ */
+
+package Tema_04;
+
+import java.util.Scanner;
+
+public class Problema_Parte2_01 {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		String frase;
+		char caracter;
+
+	}//main
+
+}//class

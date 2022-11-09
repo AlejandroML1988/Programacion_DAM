@@ -1,0 +1,47 @@
+/*Programa que lee una frase de máximo 80 caracteres y la escribe progresivamente por pantalla. Por ejemplo:
+ * "ciervo" deberá imprimir:
+ * c
+ * ci
+ * cie
+ * cier
+ * cierv
+ * ciervo
+ * 
+ */
+
+package actividades_programacion;
+
+import java.util.Scanner;
+
+public class Problema_T04_01 {
+
+	public static void main(String[] args) {
+		Scanner teclado = new Scanner(System.in);
+		String cadena; //Cadena que lee
+		String imprimir =""; //Cadena a imprimir
+		
+		System.out.println("Introduce una frase de 80 caracteres como maximo");
+		cadena = teclado.nextLine();
+		System.out.println("Frase introducida: ");
+		System.out.println(cadena);
+		System.out.println(cadena.length());
+		
+		while(cadena.length() >= 80) {
+			System.out.println("Error, ha introducido mas de 80 caracteres");
+			System.out.println("Introduce una frase de 80 caracteres como maximo");
+			cadena = teclado.nextLine();
+			System.out.println("Frase introducida: ");
+			System.out.println(cadena);
+		}
+		
+		for (int i = 0; i < cadena.length(); i++) {
+			imprimir += cadena.charAt(i);
+			System.out.println(imprimir);
+			
+		}//for
+			
+			
+		
+	}//main
+
+}//class
